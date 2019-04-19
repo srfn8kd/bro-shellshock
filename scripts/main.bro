@@ -185,7 +185,7 @@ event bro_init()
 	                  		period = smtp_attacks$end - smtp_attacks$begin;
 	                  		for ( i in smtp_attacks$samples )
 	                  			{
-	                  			payload = dhcp_attacks$samples[i]$str;
+	                  			payload = smtp_attacks$samples[i]$str;
 	                  			victim_addrs = fmt("%s%s%s", victim_addrs, |victim_addrs|>0 ? ", " : "", smtp_attacks$samples[i]$shellshock_victim);
 	                  			}
 	                  		}
